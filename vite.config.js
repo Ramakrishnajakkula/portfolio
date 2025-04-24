@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/pf/', // Change this to your repository name
+  base: '/portfolio/', // Change this to your repository name
   publicDir: 'public',
   build: {
     outDir: 'dist',
