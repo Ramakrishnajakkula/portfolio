@@ -1,17 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio/',
+  base: './portfolio',
+  publicDir: 'public',
   build: {
-    rollupOptions: {
-      external: ['react-scroll'],
-      output: {
-        globals: {
-          'react-scroll': 'ReactScroll'
-        }
-      }
+    outDir: 'dist',
+    sourcemap: true,
+    assetsDir: 'assets'
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@public': path.resolve(__dirname, './public')
     }
   }
 })

@@ -8,7 +8,7 @@ const projects = [
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     github: "https://github.com",
     demo: "https://learn2earn-demo.com",
-    image: "/images/learn2earn.png", // Updated for Vercel deployment
+    image: "/images/learn2earn.png", // Updated path
   },
   {
     title: "AI-Powered Chatbot System",
@@ -17,7 +17,7 @@ const projects = [
     technologies: ["Python", "TensorFlow", "Flask", "MongoDB", "NLTK", "JWT"],
     github: "https://github.com",
     demo: "http://127.0.0.1:5000",
-    image: "/images/chatbot.png", // Updated for Vercel deployment
+    image: "/images/chatbot.png", // Updated path
   },
   {
     title: "Product Management System",
@@ -33,7 +33,7 @@ const projects = [
     ],
     github: "https://github.com",
     demo: "https://product-management-demo.com",
-    image: "/images/product-management.png", // Updated for Vercel deployment
+    image: "/images/product-management.png", // Updated path
   },
   {
     title: "Traveling Salesman Problem",
@@ -42,7 +42,22 @@ const projects = [
     technologies: ["JavaScript", "HTML", "CSS", "Canvas API"],
     github: "https://github.com", // Replace with the actual GitHub link if available
     demo: "https://tsp-sasibhushans-projects.vercel.app/",
-    image: "/images/tsp.png", // Updated for Vercel deployment
+    image: "/images/tsp.png", // Updated path
+  },
+  {
+    title: "CryptoWeather Nexus",
+    description:
+      "A platform that combines cryptocurrency market analysis with weather forecasting, providing users with insights into both domains in a single interface.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "API Integration",
+    ],
+    github: "https://github.com",
+    demo: "https://cryptoweather-demo.com",
+    image: "/images/cryptoweather.png", // Updated path
   },
 ];
 
