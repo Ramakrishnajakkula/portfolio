@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/pf/', // Match your GitHub repository name
+  base: '/portfolio/', // Match your GitHub repository name
   publicDir: 'public',
   build: {
     outDir: 'dist',
