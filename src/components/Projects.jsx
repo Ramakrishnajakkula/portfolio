@@ -56,7 +56,7 @@ const projects = [
       "API Integration",
     ],
     github: "https://github.com",
-    demo: "https://cryptoweather-demo.com",
+    demo: "https://crypto-weather-nexus-ruddy.vercel.app/",
     image: "./images/cryptoweather.png",
   },
   {
