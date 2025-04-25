@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -20,12 +21,16 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   }, []);
 
   const navLinks = [
-    { name: "Home", to: "home" },
-    { name: "About", to: "about" },
-    { name: "Projects", to: "projects" },
-    { name: "Experience", to: "experience" },
-    { name: "Skills", to: "skills" },
-    { name: "Contact", to: "contact" },
+    { title: "Home", href: "home" },
+    { title: "About", href: "about" },
+    { title: "Skills", href: "skills" },
+    { title: "Projects", href: "projects" },
+    { title: "Contact", href: "contact" },
+    {
+      title: "Startup",
+      href: "https://ramakrishnajakkula.github.io/milk/",
+      isExternal: true,
+    },
   ];
 
   return (
@@ -74,16 +79,25 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           } md:block`}>
           <ul className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
             {navLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  className="text-gray-800 dark:text-white hover:text-accent-cyan dark:hover:text-accent-cyan cursor-pointer font-medium"
-                  onClick={() => setNavbarOpen(false)}>
-                  {link.name}
-                </Link>
-              </li>
+              <motion.li key={link.title} whileHover={{ y: -2 }}>
+                {link.isExternal ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-accent-cyan dark:hover:text-accent-cyan transition-colors">
+                    {link.title}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.href}
+                    smooth={true}
+                    duration={500}
+                    className="text-gray-600 dark:text-gray-300 hover:text-accent-cyan dark:hover:text-accent-cyan transition-colors">
+                    {link.title}
+                  </Link>
+                )}
+              </motion.li>
             ))}
           </ul>
         </div>
