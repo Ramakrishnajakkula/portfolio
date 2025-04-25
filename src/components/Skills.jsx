@@ -194,7 +194,7 @@ const SkillRadar = ({ skills, activeCategory }) => {
 
   return (
     <motion.div
-      className="relative w-full h-[350px] bg-white/70 dark:bg-secondary-dark/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700/30 rounded-xl shadow-md dark:shadow-none flex justify-center items-center"
+      className="fixed-radar-container bg-white/70 dark:bg-secondary-dark/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700/30 rounded-xl shadow-md dark:shadow-none flex justify-center items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: activeCategory ? 1 : 0 }}
       transition={{ duration: 0.5 }}>

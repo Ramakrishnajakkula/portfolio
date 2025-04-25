@@ -8,7 +8,7 @@ const projects = [
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     github: "https://github.com",
     demo: "https://learn2earn-demo.com",
-    image: "/portfolio/images/learn2earn.png", // Updated path
+    image: "/images/download.jpg", // Updated path
   },
   {
     title: "AI-Powered Chatbot System",
@@ -17,7 +17,7 @@ const projects = [
     technologies: ["Python", "TensorFlow", "Flask", "MongoDB", "NLTK", "JWT"],
     github: "https://github.com",
     demo: "http://127.0.0.1:5000",
-    image: "/portfolio/images/chatbot.png", // Updated path
+    image: "/images/chatbot.png", // Updated path
   },
   {
     title: "Product Management System",
@@ -32,8 +32,8 @@ const projects = [
       "JWT",
     ],
     github: "https://github.com",
-    demo: "https://product-management-demo.com",
-    image: "/portfolio/images/product-management.png", // Updated path
+    demo: "https://ramakrishnajakkula.github.io/zyntic-frontend/",
+    image: "/images/image.png", // Updated path
   },
   {
     title: "Traveling Salesman Problem",
@@ -42,7 +42,7 @@ const projects = [
     technologies: ["JavaScript", "HTML", "CSS", "Canvas API"],
     github: "https://github.com", // Replace with the actual GitHub link if available
     demo: "https://tsp-sasibhushans-projects.vercel.app/",
-    image: "/portfolio/images/tsp.png", // Updated path
+    image: "/images/tsp.png", // Updated path
   },
   {
     title: "CryptoWeather Nexus",
@@ -57,7 +57,7 @@ const projects = [
     ],
     github: "https://github.com",
     demo: "https://cryptoweather-demo.com",
-    image: "/portfolio/images/cryptoweather.png", // Updated path
+    image: "/images/cryptoweather.png", // Updated path
   },
 ];
 
