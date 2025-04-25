@@ -86,7 +86,7 @@ const TabContent = ({ activeTab }) => {
           },
           {
             degree: "Higher Secondary Education",
-            institution: "XYZ School",
+            institution: "Vani School",
             period: "2019 - 2021",
             description:
               "Completed with distinction in Mathematics, Physics, and Computer Science.",
