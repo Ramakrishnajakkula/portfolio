@@ -8,7 +8,7 @@ const projects = [
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     github: "https://github.com",
     demo: "https://learn2earn-demo.com",
-    image: "/images/download.jpg",
+    image: "./images/download.jpg",
   },
   {
     title: "AI-Powered Chatbot System",
@@ -17,7 +17,7 @@ const projects = [
     technologies: ["Python", "TensorFlow", "Flask", "MongoDB", "NLTK", "JWT"],
     github: "https://github.com",
     demo: "http://127.0.0.1:5000",
-    image: "/images/chatbot.png",
+    image: "./images/chatbot.png",
   },
   {
     title: "Product Management System",
@@ -33,7 +33,7 @@ const projects = [
     ],
     github: "https://github.com",
     demo: "https://ramakrishnajakkula.github.io/zyntic-frontend/",
-    image: "/images/image.png",
+    image: "./images/image.png",
   },
   {
     title: "Traveling Salesman Problem",
@@ -42,7 +42,7 @@ const projects = [
     technologies: ["JavaScript", "HTML", "CSS", "Canvas API"],
     github: "https://github.com",
     demo: "https://tsp-sasibhushans-projects.vercel.app/",
-    image: "/images/tsp.png",
+    image: "./images/tsp.png",
   },
   {
     title: "CryptoWeather Nexus",
@@ -57,7 +57,7 @@ const projects = [
     ],
     github: "https://github.com",
     demo: "https://cryptoweather-demo.com",
-    image: "/images/cryptoweather.png",
+    image: "./images/cryptoweather.png",
   },
   {
     title: "Statistical Process Control (SPC) - Techfluence",
@@ -73,16 +73,9 @@ const projects = [
     ],
     github: "https://github.com/Ramakrishnajakkula/SPC",
     demo: "https://ramakrishnajakkula.github.io/SPC/",
-    image: "/pf/images/spc.png",
+    image: "./images/spc.png",
   },
 ];
-
-const updatedProjects = projects.map((project) => ({
-  ...project,
-  image: project.image.startsWith("/pf/")
-    ? project.image
-    : `/pf${project.image}`,
-}));
 
 const Projects = () => {
   return (
@@ -104,7 +97,7 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {updatedProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={index}
               className="bg-white dark:bg-gradient-to-br dark:from-secondary-dark dark:to-secondary-dark/70 rounded-lg shadow-lg overflow-hidden group"
