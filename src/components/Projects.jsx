@@ -8,7 +8,7 @@ const projects = [
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
     github: "https://github.com",
     demo: "https://learn2earn-demo.com",
-    image: "/images/download.jpg", // Updated path
+    image: "/images/download.jpg",
   },
   {
     title: "AI-Powered Chatbot System",
@@ -17,7 +17,7 @@ const projects = [
     technologies: ["Python", "TensorFlow", "Flask", "MongoDB", "NLTK", "JWT"],
     github: "https://github.com",
     demo: "http://127.0.0.1:5000",
-    image: "/images/chatbot.png", // Updated path
+    image: "/images/chatbot.png",
   },
   {
     title: "Product Management System",
@@ -33,16 +33,16 @@ const projects = [
     ],
     github: "https://github.com",
     demo: "https://ramakrishnajakkula.github.io/zyntic-frontend/",
-    image: "/images/image.png", // Updated path
+    image: "/images/image.png",
   },
   {
     title: "Traveling Salesman Problem",
     description:
       "A visualization of the Traveling Salesman Problem (TSP) that demonstrates optimization algorithms to find the shortest possible route visiting a set of cities and returning to the origin city.",
     technologies: ["JavaScript", "HTML", "CSS", "Canvas API"],
-    github: "https://github.com", // Replace with the actual GitHub link if available
+    github: "https://github.com",
     demo: "https://tsp-sasibhushans-projects.vercel.app/",
-    image: "/images/tsp.png", // Updated path
+    image: "/images/tsp.png",
   },
   {
     title: "CryptoWeather Nexus",
@@ -57,9 +57,32 @@ const projects = [
     ],
     github: "https://github.com",
     demo: "https://cryptoweather-demo.com",
-    image: "/images/cryptoweather.png", // Updated path
+    image: "/images/cryptoweather.png",
+  },
+  {
+    title: "Statistical Process Control (SPC) - Techfluence",
+    description:
+      "Part of the Techfluence website, this module provides statistical process control tools for manufacturing quality analysis. Features interactive charts for real-time monitoring, trend analysis, and quality metrics visualization.",
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Chart.js",
+      "CSS",
+      "Statistical Analysis",
+      "Techfluence Integration",
+    ],
+    github: "https://github.com/Ramakrishnajakkula/SPC",
+    demo: "https://ramakrishnajakkula.github.io/SPC/",
+    image: "/pf/images/spc.png",
   },
 ];
+
+const updatedProjects = projects.map((project) => ({
+  ...project,
+  image: project.image.startsWith("/pf/")
+    ? project.image
+    : `/pf${project.image}`,
+}));
 
 const Projects = () => {
   return (
@@ -81,7 +104,7 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {updatedProjects.map((project, index) => (
             <motion.div
               key={index}
               className="bg-white dark:bg-gradient-to-br dark:from-secondary-dark dark:to-secondary-dark/70 rounded-lg shadow-lg overflow-hidden group"
